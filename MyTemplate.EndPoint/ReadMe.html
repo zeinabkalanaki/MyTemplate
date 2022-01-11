@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Read Me</title>
+    <style rel="css">
+      * {
+        font-family: Tahoma;
+        font-size: 10px;
+      }
+      body{
+          margin-top: 50px;
+      }
+      li{
+          margin-bottom: 5px;
+          line-height: 2;
+      }
+      ul,ol{
+        margin-top: 5px;
+      }
+      
+    </style>
+  </head>
+  <body style="direction: rtl">
+    <ol>
+      <li>
+        ایجاد entity و Dto مربوطه در پروژه
+        <strong>MyTemplate.Domain.Entities</strong>
+      </li>
+      <li>
+        ایجاد config مربوطه در مسیر
+        <strong
+          >MyTemplate.Infrastructures.DataAccess.EntityConfiguration</strong
+        >
+      </li>
+      <li>
+        افزودن dbset مربوطه در کلاس ClockWebDbContext در مسیر
+        <strong>MyTemplate.Infrastructures.DataAccess.DbContexts</strong>
+      </li>
+      <li>
+        ایجاد interface repository در مسیر
+        <strong> MyTemplate.Domain.Abstracts.Repositories</strong>
+      </li>
+
+      <li>
+        پیاده سازی repository ایجاد شده در مرحله قبل در مسیر
+        <strong>MyTemplate.Infrastructures.DataAccess.Repositories</strong>
+      </li>
+      <li>
+        اضافه کردن repository ایجاد شده در بخش 
+        Injection Config در کلاس startup در مسیر
+        <strong>MyTemplate.APIs</strong>
+      </li>
+      <li>
+        <h1 style="color: #1c1cdfde">پیاده سازی ApplicationServices</h1>
+
+        <ul>
+          <li>
+            اگر احتیاج به پیاده سازی business logic بود
+            <ol>
+              <li>
+                هر قسمت از business logic را به صورت یک متد جداگانه (domain
+                service) به ترتیب زیر ایجاد میکنیم
+                <ol>
+                  <li>
+                    ایجاد اینترفیس مختص هر متد در مسیر
+                    <strong
+                      >MyTemplate.Domain.Abstracts.DomainServices</strong
+                    >
+                  </li>
+                  <li>
+                    پیاده سازی متد ایجاد شده در مسیر
+                    <strong>MyTemplate.Domain.Services</strong>
+                  </li>
+                  <li style="color: #dc143c">
+                    اضافه کردن domain service ایجاد شده در بخش Services
+                    Injection Config در کلاس startup در مسیر
+                    <strong>MyTemplate.APIs</strong>
+                  </li>
+                </ol>
+              </li>
+
+            </ol>
+          </li>
+          <li>
+            ایجاد اینترفیس ApplicationServices در مسیر
+              <strong>MyTemplate.Domain.Abstracts.ApplicationServices</strong>
+          </li>
+          <li>
+            پیاده سازی Application Service مرحله قبل در مسیر
+            <strong> MyTemplate.Domain.ApplicationServices </strong> <div>
+                اینجکت
+                repository , domain service در صورت نیاز
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+          ایجاد api مورد نظر در مسیر <strong>MyTemplate.APIs.Controllers</strong> و اینجکت application service های مورد نیاز
+      </li>
+      <li>
+          فراخوانی و تست از طریق swagger
+      </li>
+    </ol>
+  </body>
+</html>

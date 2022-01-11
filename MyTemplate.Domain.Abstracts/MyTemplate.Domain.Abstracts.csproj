@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>%24/MyTemplate/Overtime/MyTemplateMyTemplate/MyTemplateMyTemplate.Domain.Abstracts</SccProjectName>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <SccAuxPath>http://srv5615:8080/tfs/human_resources_dpt</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyTemplate.Domain.Entities\MyTemplate.Domain.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
